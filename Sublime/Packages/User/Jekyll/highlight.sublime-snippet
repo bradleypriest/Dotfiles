@@ -1,0 +1,10 @@
+<snippet>
+  <content><![CDATA[
+{% highlight ${1:ruby} %}
+	${2:#Code goes here...}
+{% endhighlight %}
+]]></content>
+  <tabTrigger>high</tabTrigger>
+  <scope>text.html.markdown</scope>
+  <description>highlight</description>
+</snippet>

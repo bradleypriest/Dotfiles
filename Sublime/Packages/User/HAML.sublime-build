@@ -1,0 +1,4 @@
+{
+  "cmd": ["haml","--check", "$file"],
+  "selector": "text.haml"
+}

@@ -1,0 +1,6 @@
+{
+  "ruby_cucumber_exec": "cucumber --drb --no-color --require features",
+  "ruby_rspec_exec": "rspec --drb",
+  "ruby_cucumber_folder": "features",
+  "ruby_rspec_folder": "spec"
+}

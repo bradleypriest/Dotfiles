@@ -1,0 +1,5 @@
+[
+  { "keys": ["ctrl+shift+d"], "command": "duplicate_line" },
+  { "keys": ["super+alt+."], "command": "close_tag" },
+  { "keys": ["ctrl+shift+."], "command": "erb" }
+]

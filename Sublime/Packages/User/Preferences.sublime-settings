@@ -1,0 +1,68 @@
+{
+	"binary_file_patterns":
+	[
+		"*.jpg",
+		"*.ico",
+		"*.jpeg",
+		"*.png",
+		"*.gif",
+		"*.ttf",
+		"*.tga",
+		"*.dds",
+		"*.ico",
+		"*.eot",
+		"*.pdf"
+	],
+	"color_scheme": "Packages/Color Scheme - Default/Solarized (Dark).tmTheme",
+	"dictionary": "Packages/Language - English/en_GB.dic",
+	"file_exclude_patterns":
+	[
+		"*.pyc",
+		"*.pyo",
+		"*.exe",
+		"*.dll",
+		"*.obj",
+		"*.o",
+		"*.a",
+		"*.lib",
+		"*.so",
+		"*.dylib",
+		"*.ncb",
+		"*.sdf",
+		"*.suo",
+		"*.pdb",
+		"*.idb",
+		".DS_Store",
+		"*.class",
+		"*.psd",
+		"*.fla",
+		"*.log",
+		"*.otf",
+		".gitkeep",
+		"*.scssc",
+		"*.cssc",
+		"*.zip"
+	],
+	"folder_exclude_patterns":
+	[
+		".svn",
+		".git",
+		".hg",
+		"CVS",
+		"flat-html",
+		"psds",
+		".yardoc",
+		"cache",
+		"capybara"
+	],
+	"font_face": "Inconsolata",
+	"font_size": 14.0,
+	"highlight_line": true,
+	"ignored_packages":
+	[
+	],
+	"tab_size": 2,
+	"translate_tabs_to_spaces": true,
+	"trim_trailing_white_space_on_save": true,
+	"use_simple_full_screen": true
+}
