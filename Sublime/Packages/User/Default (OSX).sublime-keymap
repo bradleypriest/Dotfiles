@@ -1,5 +1,8 @@
 [
   { "keys": ["ctrl+shift+d"], "command": "duplicate_line" },
   { "keys": ["super+alt+."], "command": "close_tag" },
-  { "keys": ["ctrl+shift+."], "command": "erb" }
+  { "keys": ["ctrl+shift+."], "command": "erb" },
+  { "keys": ["super+shift+t"], "command": "reopen_last_file" },
+  { "keys": ["super+shift+r"], "command": "run_all_ruby_test" },
+  { "keys": ["super+shift+e"], "command": "run_single_ruby_test" }
 ]
