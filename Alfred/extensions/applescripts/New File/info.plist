@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>action</key>
+	<true/>
+	<key>background</key>
+	<true/>
+	<key>category</key>
+	<string>APPLESCRIPTS</string>
+	<key>command</key>
+	<string>(*
+	New file script v1.0 (14-4-2012)
+	Created by Ian Isted (@ianisted)
+	http://ianisted.co.uk
+
+	Simply invoke this script from alfred and a new file will be created in your most recent finder window.
+*)
+
+try
+	tell application "Finder" to set the this_folder to (folder of the front window) as alias
+	set thefullpath to POSIX path of this_folder &amp; "New file " &amp; (do shell script "date '+%d-%m-%Y'") &amp; ".txt"
+	do shell script "touch \"" &amp; thefullpath &amp; "\""
+	tell application "Finder" to reopen
+    tell application "Finder" to activate
+    tell application "Finder" to reveal POSIX file thefullpath as text
+end try</string>
+	<key>disabled</key>
+	<false/>
+	<key>keyword</key>
+	<string>newfile</string>
+	<key>parameter</key>
+	<integer>0</integer>
+	<key>subtitle</key>
+	<string>Creates a new file in your current Finder window.</string>
+	<key>title</key>
+	<string>New File</string>
+</dict>
+</plist>
