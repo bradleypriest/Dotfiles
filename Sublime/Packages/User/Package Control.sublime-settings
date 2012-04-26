@@ -4,11 +4,9 @@
 	[
 		"Backbone.js",
 		"CoffeeScript",
-		"ColorPicker",
-		"Cucumber",
 		"ERB Insert and Toggle Commands",
 		"Git",
-		"GitHubinator",
+		"Handlebars.tmbundle",
 		"Indent XML",
 		"Jasmine",
 		"Package Control",
@@ -27,6 +25,7 @@
 		"https://github.com/kemayo/sublime-text-2-git",
 		"https://github.com/jashkenas/coffee-script-tmbundle",
 		"https://github.com/sagework/cucumber-sublime2-bundle.git",
-		"https://github.com/gja/sublime-text-2-jasmine"
+		"https://github.com/gja/sublime-text-2-jasmine",
+		"https://github.com/MarkBorcherding/Handlebars.tmbundle"
 	]
 }

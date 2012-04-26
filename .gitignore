@@ -2,3 +2,4 @@ Icon?
 .dropbox
 *.pyc
 *.last-run
+*.cache
