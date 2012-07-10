@@ -3,3 +3,4 @@ ln -s ~/Dropbox/Dotfiles/gemrc ~/.gemrc
 ln -s ~/Dropbox/Dotfiles/zshrc ~/.zshrc
 ln -s ~/Dropbox/Dotfiles/oh-my-zsh/custom/plugins ~/.oh-my-zsh/custom/plugins
 ln -s ~/Dropbox/Dotfiles/Sublime/Packages/User ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User
+ln -s ~/Dropbox/Dotfiles/IMDB\ this.workflow ~/Library/Services
