@@ -13,6 +13,7 @@
 		"*.eot",
 		"*.pdf"
 	],
+	"bold_folder_labels": true,
 	"color_scheme": "Packages/User/Solarized (Dark).tmTheme",
 	"dictionary": "Packages/Language - English/en_GB.dic",
 	"file_exclude_patterns":
@@ -60,6 +61,10 @@
 	"highlight_line": true,
 	"ignored_packages":
 	[
+	],
+	"rulers":
+	[
+		85
 	],
 	"tab_size": 2,
 	"translate_tabs_to_spaces": true,
