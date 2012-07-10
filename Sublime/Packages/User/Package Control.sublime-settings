@@ -1,5 +1,5 @@
 {
-	"auto_upgrade_last_run": 1332405883,
+	"auto_upgrade_last_run": 1341881944,
 	"installed_packages":
 	[
 		"Backbone.js",
@@ -13,19 +13,5 @@
 		"RSpec",
 		"RubyTest",
 		"SideBarEnhancements"
-	],
-	"package_name_map":
-	{
-		"coffee-script-tmbundle": "CoffeeScript",
-		"cucumber-sublime2-bundle": "Cucumber",
-		"sublime-text-2-git": "Git"
-	},
-	"repositories":
-	[
-		"https://github.com/kemayo/sublime-text-2-git",
-		"https://github.com/jashkenas/coffee-script-tmbundle",
-		"https://github.com/sagework/cucumber-sublime2-bundle.git",
-		"https://github.com/gja/sublime-text-2-jasmine",
-		"https://github.com/MarkBorcherding/Handlebars.tmbundle"
 	]
 }

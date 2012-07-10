@@ -1,2 +1,1 @@
 gem: --no-ri --no-rdoc
-custom_shebang: $env bundler_wrapper

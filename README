@@ -1,5 +1,8 @@
 #TODO
 ln -s ~/Dropbox/Dotfiles/gemrc ~/.gemrc
+ln -s ~/Dropbox/Dotfiles/pryrc ~/.pryrc
+ln -s ~/Dropbox/Dotfiles/irbrc ~/.irbrc
+ln -s ~/Dropbox/Dotfiles/rvmrc ~/.rvmrc
 ln -s ~/Dropbox/Dotfiles/zshrc ~/.zshrc
 ln -s ~/Dropbox/Dotfiles/oh-my-zsh/custom/plugins ~/.oh-my-zsh/custom/plugins
 ln -s ~/Dropbox/Dotfiles/Sublime/Packages/User ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User

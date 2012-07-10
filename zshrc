@@ -2,6 +2,8 @@
 
 export ZSH=$HOME/.oh-my-zsh
 export EDITOR=subl
+# eval "$(hub alias -s)"
+alias subl='/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl'
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -20,9 +22,6 @@ DISABLE_AUTO_UPDATE="true"
 
 # Uncomment following line if you want to disable autosetting terminal title.
 # DISABLE_AUTO_TITLE="true"
-
-# Uncomment following line if you want disable red dots displayed while waiting for completion
-DISABLE_COMPLETION_WAITING_DOTS="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
@@ -43,5 +42,4 @@ export EC2_CERT="$(/bin/ls $HOME/.ec2/cert-*.pem)"
 export EC2_HOME="/usr/local/Cellar/ec2-api-tools/1.5.2.5/jars"
 
 #RVM
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-
+[[ -s "/Users/bradleypriest/.rvm/scripts/rvm" ]] && source "/Users/bradleypriest/.rvm/scripts/rvm"

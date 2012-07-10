@@ -41,10 +41,10 @@ def load_gem(gem, &block)
 end
 
 # Highlighting and other features
-load_gem 'wirble' do
-  Wirble.init
-  Wirble.colorize
-end
+# load_gem 'wirble' do
+#   Wirble.init
+#   Wirble.colorize
+# end
 
 # Improved formatting for objects
 # load_gem 'awesome_print'
@@ -64,25 +64,12 @@ end
 def enable_logging!
   if defined? Rails
     require 'logger'
-    if Rails.version =~ /^2\./ # Rails 2.3
-       Object.const_set('RAILS_DEFAULT_LOGGER', Logger.new(STDOUT))
-    else # Rails 3
-       ActiveRecord::Base.logger = Logger.new(STDOUT)
-    end
+    ActiveRecord::Base.logger = Logger.new(STDOUT)
   end
 end
 
 def gitx
  `gitx`
-end
-
-if defined?(::Localist)
-  def l
-    @l ||= Listing.find(40130)
-  end
-  def u
-    @u ||= User.find(100)
-  end
 end
 
 # # Enable route helpers in Rails console
