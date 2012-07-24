@@ -9,7 +9,7 @@
 	statusHints = false
 [core]
 	whitespace = trailing-space,space-before-tab
-	excludesfile = /Users/bradleypriest/.gitignore
+	excludesfile = ~/.gitignore
 [diff]
 	renames = copies
 [branch]

@@ -3,7 +3,6 @@
 export ZSH=$HOME/.oh-my-zsh
 export EDITOR=subl
 # eval "$(hub alias -s)"
-alias subl='/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl'
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
