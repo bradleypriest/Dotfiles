@@ -56,8 +56,8 @@
 		"cache",
 		"capybara"
 	],
-	"font_face": "Inconsolata",
-	"font_size": 14.0,
+	"font_face": "Inconsolata-dz",
+	"font_size": 12.0,
 	"highlight_line": true,
 	"ignored_packages":
 	[
