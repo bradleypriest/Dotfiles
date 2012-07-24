@@ -16,3 +16,5 @@ ln -s ~/Dropbox/Dotfiles/Sublime/Packages/User ~/Library/Application\ Support/Su
 
 rm -rf ~/Library/Application\ Support/Alfred
 ln -s ~/Dropbox/Dotfiles/Alfred ~/Library/Application\ Support
+
+open Inconsolata-dz.otf
