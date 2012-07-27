@@ -7,9 +7,11 @@ ln -s ~/Dropbox/Dotfiles/pryrc ~/.pryrc
 ln -s ~/Dropbox/Dotfiles/irbrc ~/.irbrc
 ln -s ~/Dropbox/Dotfiles/rvmrc ~/.rvmrc
 ln -s ~/Dropbox/Dotfiles/zshrc ~/.zshrc
-
-ln -s ~/Dropbox/Dotfiles/oh-my-zsh/custom/plugins ~/.oh-my-zsh/custom/plugins
 ln -s ~/Dropbox/Dotfiles/IMDB\ this.workflow ~/Library/Services
+
+brew install z
+rm -rf ~/.oh-my-zsh/custom/plugins
+ln -s ~/Dropbox/Dotfiles/oh-my-zsh/custom/plugins ~/.oh-my-zsh/custom/plugins
 
 rm -rf ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User
 ln -s ~/Dropbox/Dotfiles/Sublime/Packages/User ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/

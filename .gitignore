@@ -3,3 +3,4 @@ Icon?
 *.pyc
 *.last-run
 *.cache
+*.alfdb
