@@ -40,5 +40,10 @@ export EC2_PRIVATE_KEY="$(/bin/ls $HOME/.ec2/pk-*.pem)"
 export EC2_CERT="$(/bin/ls $HOME/.ec2/cert-*.pem)"
 export EC2_HOME="/usr/local/Cellar/ec2-api-tools/1.5.2.5/jars"
 
+function create_pull_request() {
+  branch=$(git symbolic-ref HEAD | cut -d'/' -f3)
+  hub pull-request "$branch" -b tradegecko:develop -h tradegecko:$branch
+}
+
 #RVM
 [[ -s "/Users/bradleypriest/.rvm/scripts/rvm" ]] && source "/Users/bradleypriest/.rvm/scripts/rvm"

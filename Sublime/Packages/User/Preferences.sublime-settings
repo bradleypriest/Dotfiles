@@ -42,19 +42,23 @@
 		".gitkeep",
 		"*.scssc",
 		"*.cssc",
-		"*.zip"
+		"*.zip",
+		"*-spade.js",
+		"plupload.full.js"
 	],
 	"folder_exclude_patterns":
 	[
 		".svn",
 		".git",
 		".hg",
+		"coverage",
 		"CVS",
 		"flat-html",
 		"psds",
 		".yardoc",
 		"cache",
-		"capybara"
+		"capybara",
+		"dist"
 	],
 	"font_face": "Inconsolata-dz",
 	"font_size": 12.0,
