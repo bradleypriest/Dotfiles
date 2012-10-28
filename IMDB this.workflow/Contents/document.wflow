@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>AMApplicationBuild</key>
-	<string>339.2</string>
+	<string>346</string>
 	<key>AMApplicationVersion</key>
-	<string>2.2.4</string>
+	<string>2.3</string>
 	<key>AMDocumentVersion</key>
 	<string>2</string>
 	<key>actions</key>
@@ -25,7 +25,7 @@
 					</array>
 				</dict>
 				<key>AMActionVersion</key>
-				<string>2.1</string>
+				<string>2.1.1</string>
 				<key>AMApplication</key>
 				<array>
 					<string>Finder</string>
@@ -52,7 +52,7 @@
 				<key>BundleIdentifier</key>
 				<string>com.apple.Automator.Get_Selected_Finder_Items_2</string>
 				<key>CFBundleVersion</key>
-				<string>2.1</string>
+				<string>2.1.1</string>
 				<key>CanShowSelectedItemsWhenRun</key>
 				<false/>
 				<key>CanShowWhenRun</key>
@@ -94,7 +94,7 @@
 					</array>
 				</dict>
 				<key>AMActionVersion</key>
-				<string>2.0.2</string>
+				<string>2.0.3</string>
 				<key>AMApplication</key>
 				<array>
 					<string>Automator</string>
@@ -128,7 +128,7 @@
 				<key>ActionParameters</key>
 				<dict>
 					<key>COMMAND_STRING</key>
-					<string>ARGV.each do |f|
+					<string>ARGV.uniq.each do |f|
   parts = f.split("/")[-1].gsub(" ",".").split(".")
   name = []
   
@@ -154,7 +154,7 @@ end</string>
 				<key>BundleIdentifier</key>
 				<string>com.apple.RunShellScript</string>
 				<key>CFBundleVersion</key>
-				<string>2.0.2</string>
+				<string>2.0.3</string>
 				<key>CanShowSelectedItemsWhenRun</key>
 				<false/>
 				<key>CanShowWhenRun</key>
@@ -276,7 +276,7 @@ end</string>
 					</array>
 				</dict>
 				<key>AMActionVersion</key>
-				<string>1.0.1</string>
+				<string>1.0.2</string>
 				<key>AMApplication</key>
 				<array>
 					<string>Safari</string>
@@ -303,7 +303,7 @@ end</string>
 				<key>BundleIdentifier</key>
 				<string>com.apple.Automator.Display_Webpages</string>
 				<key>CFBundleVersion</key>
-				<string>1.0.1</string>
+				<string>1.0.2</string>
 				<key>CanShowSelectedItemsWhenRun</key>
 				<false/>
 				<key>CanShowWhenRun</key>
@@ -339,19 +339,19 @@ end</string>
 	</array>
 	<key>connectors</key>
 	<dict>
-		<key>3FF9D0AA-41E0-4291-BDC6-C122B2A1D26C</key>
-		<dict>
-			<key>from</key>
-			<string>9456E505-9778-4D16-B68D-DB2AD9657201 - 9456E505-9778-4D16-B68D-DB2AD9657201</string>
-			<key>to</key>
-			<string>DC8ED648-EB26-4127-87B8-421BE5986BC4 - DC8ED648-EB26-4127-87B8-421BE5986BC4</string>
-		</dict>
-		<key>C7B085F6-3D59-4D26-B086-08607047CFB8</key>
+		<key>AAD2C425-F9AE-4B2D-BE5D-476434CC7DC0</key>
 		<dict>
 			<key>from</key>
 			<string>3D8142BA-645A-4491-9B82-20902894B791 - 3D8142BA-645A-4491-9B82-20902894B791</string>
 			<key>to</key>
 			<string>9456E505-9778-4D16-B68D-DB2AD9657201 - 9456E505-9778-4D16-B68D-DB2AD9657201</string>
+		</dict>
+		<key>C1D90170-7910-4F13-B672-C08D741FE36C</key>
+		<dict>
+			<key>from</key>
+			<string>9456E505-9778-4D16-B68D-DB2AD9657201 - 9456E505-9778-4D16-B68D-DB2AD9657201</string>
+			<key>to</key>
+			<string>DC8ED648-EB26-4127-87B8-421BE5986BC4 - DC8ED648-EB26-4127-87B8-421BE5986BC4</string>
 		</dict>
 	</dict>
 	<key>variables</key>
