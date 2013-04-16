@@ -29,21 +29,22 @@ plugins=(bundler brew git powder rake textmate z heroku)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/usr/X11/bin:/sbin:~/bin
-
+export PATH=/usr/local/bin:/usr/local/sbin:/Applications/Postgres.app/Contents/MacOS/bin:/usr/bin:/bin:/usr/sbin:/usr/local/share/npm/bin:/usr/X11/bin:/sbin:~/bin
 export NODE_PATH=/usr/local/lib/node:/usr/local/lib/node_modules:$NODE_PATH
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-
-export JAVA_HOME="$(/usr/libexec/java_home)"
-export EC2_PRIVATE_KEY="$(/bin/ls $HOME/.ec2/pk-*.pem)"
-export EC2_CERT="$(/bin/ls $HOME/.ec2/cert-*.pem)"
-export EC2_HOME="/usr/local/Cellar/ec2-api-tools/1.5.2.5/jars"
 
 function create_pull_request() {
   branch=$(git symbolic-ref HEAD | cut -d'/' -f3)
   hub pull-request "$branch" -b tradegecko:develop -h tradegecko:$branch
 }
 
-#RVM
-[[ -s "/Users/bradleypriest/.rvm/scripts/rvm" ]] && source "/Users/bradleypriest/.rvm/scripts/rvm"
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
+
+function deploy() {
+  git checkout master
+  git merge develop
+  git push origin master
+  git push heroku master
+}

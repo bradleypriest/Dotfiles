@@ -6,6 +6,7 @@
   { "keys": ["super+shift+r"], "command": "run_all_ruby_test" },
   { "keys": ["super+shift+e"], "command": "run_single_ruby_test" },
   { "keys": ["ctrl+alt+super+r"], "command": "run_last_ruby_test" },
+  { "keys": ["super+v"], "command": "paste_and_indent" },
   { "keys": ["super+shift+v"], "command": "paste" },
-  { "keys": ["super+v"], "command": "paste_and_indent" }
+  {"keys":  ["ctrl+super+r"], "command": "reveal_in_side_bar"}
 ]

@@ -1,18 +1,21 @@
 {
-	"auto_upgrade_last_run": 1341881944,
+	"auto_upgrade_last_run": null,
 	"installed_packages":
 	[
-		"Backbone.js",
-		"CoffeeScript",
-		"ERB Insert and Toggle Commands",
+		"All Autocomplete",
 		"Git",
+		"GitGutter",
 		"GitHubinator",
-		"Handlebars.tmbundle",
+		"Handlebars",
 		"Indent XML",
-		"Jasmine",
+		"Markdown Preview",
 		"Package Control",
+		"Pretty JSON",
 		"RSpec",
 		"RubyTest",
-		"SideBarEnhancements"
+		"SCSS",
+		"SideBarEnhancements",
+		"sublime-better-coffeescript",
+		"Theme - Soda"
 	]
 }

@@ -44,6 +44,7 @@
 		"*.cssc",
 		"*.zip",
 		"*-spade.js",
+		"*.sublime-workspace",
 		"plupload.full.js"
 	],
 	"folder_exclude_patterns":
@@ -51,6 +52,7 @@
 		".svn",
 		".git",
 		".hg",
+		".sass-cache",
 		"coverage",
 		"CVS",
 		"flat-html",
@@ -58,10 +60,11 @@
 		".yardoc",
 		"cache",
 		"capybara",
-		"dist"
+		"dist",
+		".zeus.sock"
 	],
 	"font_face": "Inconsolata-dz",
-	"font_size": 12.0,
+	"font_size": 11.0,
 	"highlight_line": true,
 	"ignored_packages":
 	[
@@ -70,7 +73,11 @@
 	[
 		85
 	],
+	"scroll_past_end": true,
+	"show_minimap": false,
+	"soda_classic_tabs": true,
 	"tab_size": 2,
+	"theme": "Soda Dark.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,
 	"use_simple_full_screen": true

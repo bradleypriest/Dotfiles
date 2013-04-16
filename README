@@ -8,8 +8,10 @@ ln -s ~/Dropbox/Dotfiles/irbrc ~/.irbrc
 ln -s ~/Dropbox/Dotfiles/rvmrc ~/.rvmrc
 ln -s ~/Dropbox/Dotfiles/zshrc ~/.zshrc
 ln -s ~/Dropbox/Dotfiles/IMDB\ this.workflow ~/Library/Services
+ln -s ~/Dropbox/Dotfiles/HexColorPicker.colorPicker ~/Library/ColorPickers
 
-brew install z
+ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
+
 rm -rf ~/.oh-my-zsh/custom/plugins
 ln -s ~/Dropbox/Dotfiles/oh-my-zsh/custom/plugins ~/.oh-my-zsh/custom/plugins
 
@@ -20,3 +22,5 @@ rm -rf ~/Library/Application\ Support/Alfred
 ln -s ~/Dropbox/Dotfiles/Alfred ~/Library/Application\ Support
 
 open Inconsolata-dz.otf
+
+ln -s "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl
