@@ -2,7 +2,11 @@
 	"auto_upgrade_last_run": null,
 	"installed_packages":
 	[
+		"Alignment",
 		"All Autocomplete",
+		"Better CoffeeScript",
+		"ColorSchemeSelector",
+		"Ember.js Snippets",
 		"Git",
 		"GitGutter",
 		"GitHubinator",
@@ -15,7 +19,7 @@
 		"RubyTest",
 		"SCSS",
 		"SideBarEnhancements",
-		"sublime-better-coffeescript",
+		"SublimeTODO",
 		"Theme - Soda"
 	]
 }

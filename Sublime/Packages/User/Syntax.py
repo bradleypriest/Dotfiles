@@ -9,9 +9,9 @@ class DetectFileTypeCommand(sublime_plugin.EventListener):
 
     name = os.path.basename(filename.lower())
     if name[-8:] == "_spec.rb":
-      set_syntax(view, "Rspec", "Rspec")
+      set_syntax(view, "RSpec", "RSpec")
     elif name == "factories.rb":
-      set_syntax(view, "Rspec", "Rspec")
+      set_syntax(view, "RSpec", "RSpec")
     elif name[-4:] == "file":
       set_syntax(view, "Ruby on Rails", "Rails")
     elif name[-2:] == "rc":

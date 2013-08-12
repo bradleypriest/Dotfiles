@@ -3,7 +3,7 @@
 		The directory containing your coffee binary. Usually
 		/usr/local/bin.
 	*/
-	"binDir": "/usr/local/share/npm/bin/coffee"
+	"binDir": "/usr/local/bin"
 
 	/*
 		Compile without the top-level function wrapper (coffee -b).
@@ -15,7 +15,7 @@
 		Enable or disable refresh the compiled Output on Save.
 		Only available for watch mode.
 	*/
-,	"watchOnSave": true
+,	"watchOnSave": false
 	/*
 		Enable refreshing compiled JS when CoffeeScript is modified.
 
@@ -26,7 +26,7 @@
 	/*
 		Enable Compiling on save. It will compile into the same folder.
 	*/
-,	"compileOnSave": true
+,	"compileOnSave": false
 	/*
 		## Enable outputting the results of the compiled coffeescript in a panel
 	*/
