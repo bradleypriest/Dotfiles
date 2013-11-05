@@ -2,3 +2,4 @@
 tmp/restart.txt
 .pry_history
 .sass-cache
+zeus.json

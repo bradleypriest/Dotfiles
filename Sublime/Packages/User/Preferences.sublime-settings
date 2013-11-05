@@ -69,12 +69,8 @@
 	"highlight_line": true,
 	"ignored_packages":
 	[
-		"SCSS",
 		"Pretty JSON",
-		"RSpec",
-		"SideBarEnhancements",
-		"Markdown Preview",
-		"RubyTest"
+		"RSpec"
 	],
 	"rulers":
 	[
@@ -82,9 +78,9 @@
 	],
 	"scroll_past_end": true,
 	"show_minimap": false,
-	"theme": "Soda Dark.sublime-theme",
 	"soda_classic_tabs": true,
 	"tab_size": 2,
+	"theme": "Soda Dark.sublime-theme",
 	"todo":
 	{
 		"case_sensitive": true,

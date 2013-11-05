@@ -32,6 +32,7 @@ source $ZSH/oh-my-zsh.sh
 export PATH=/usr/local/bin:/usr/local/sbin:/Applications/Postgres.app/Contents/MacOS/bin:/usr/bin:/bin:/usr/sbin:/usr/local/share/npm/bin:/usr/X11/bin:/sbin:~/bin
 export NODE_PATH=/usr/local/lib/node:/usr/local/lib/node_modules:$NODE_PATH
 
+export SSL_CERT_FILE=/usr/local/etc/cacert.pem
 
 function create_pull_request() {
   branch=$(git symbolic-ref HEAD | cut -d'/' -f3)

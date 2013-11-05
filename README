@@ -1,4 +1,7 @@
 #TODO script
+
+defaults write com.google.Chrome.plist AppleEnableSwipeNavigateWithScrolls -bool FALSE
+
 ln -s ~/Dropbox/Dotfiles/gitconfig ~/.gitconfig
 ln -s ~/Dropbox/Dotfiles/gitignore_global ~/.gitignore_global
 
