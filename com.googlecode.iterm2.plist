@@ -634,11 +634,11 @@
 	<key>NSTableView Sort Ordering KeyBingingTable</key>
 	<array/>
 	<key>NSWindow Frame Preferences</key>
-	<string>853 342 924 485 0 0 2560 1418 </string>
+	<string>269 144 605 485 0 0 1440 878 </string>
 	<key>NSWindow Frame SUStatusFrame</key>
 	<string>1035 230 384 129 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 437 570 426 0 0 1440 878 </string>
+	<string>0 971 570 426 0 0 2560 1418 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -2909,7 +2909,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2013-11-17T01:23:04Z</date>
+	<date>2014-01-15T01:14:12Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>ShowBookmarkName</key>
@@ -2943,7 +2943,7 @@
 	<key>WebKitDefaultFontSize</key>
 	<integer>11</integer>
 	<key>WebKitStandardFont</key>
-	<string>.Lucida Grande UI</string>
+	<string>Lucida Grande</string>
 	<key>WindowNumber</key>
 	<true/>
 	<key>WindowStyle</key>
@@ -2955,6 +2955,6 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>1.0.0.20131116</string>
+	<string>1.0.0.20131228</string>
 </dict>
 </plist>

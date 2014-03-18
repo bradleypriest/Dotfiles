@@ -34,3 +34,13 @@ def pbcopy(input)
   IO.popen('pbcopy', 'w') { |f| f << str }
   str
 end
+
+class Array
+  def occurrences
+    # make the hash default to 0 so that += will work correctly
+    h = Hash.new(0)
+    # iterate over the array, counting duplicate entries
+    self.each { |v| h[v] += 1 }
+    h
+  end
+end

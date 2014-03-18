@@ -2,6 +2,6 @@
   "run_rspec_command": "zeus rspec {relative_path}",
   "run_single_rspec_command": "zeus rspec {relative_path}:{line_number}",
 
-  "run_ruby_unit_command": "zeus test {relative_path}",
-  "run_single_ruby_unit_command": "zeus test {relative_path} -n '{test_name}'"
+  "run_ruby_unit_command": "bin/rake test {relative_path}",
+  "run_single_ruby_unit_command": "bin/rake test {relative_path} TESTOPTS='--name {test_name}'"
 }

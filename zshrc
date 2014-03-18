@@ -35,8 +35,15 @@ export NODE_PATH=/usr/local/lib/node:/usr/local/lib/node_modules:$NODE_PATH
 export SSL_CERT_FILE=/usr/local/etc/cacert.pem
 
 function create_pull_request() {
+  repo=$(printf '%s\n' "${PWD##*/}")
   branch=$(git symbolic-ref HEAD | cut -d'/' -f3)
-  hub pull-request "$branch" -b tradegecko:develop -h tradegecko:$branch
+  if [ "$1" != "" ]
+  then
+    title=$(echo "$1")
+  else
+    title=$(git log -1 --pretty=%B | head -1)
+  fi
+  hub pull-request -m "$title" -b $repo:develop -h $repo:$branch
 }
 
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
