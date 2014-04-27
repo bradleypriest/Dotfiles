@@ -4,3 +4,4 @@ Icon?
 *.last-run
 *.cache
 *.alfdb
+*.system-ca-bundle
