@@ -70,9 +70,7 @@
 	"highlight_line": true,
 	"ignored_packages":
 	[
-		"Pretty JSON",
-		"RSpec",
-		"Color Highlighter"
+		"RSpec"
 	],
 	"rulers":
 	[
