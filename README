@@ -1,29 +1,7 @@
-#TODO script
+# dotfiles
 
-defaults write com.google.Chrome.plist AppleEnableSwipeNavigateWithScrolls -bool FALSE
+## Installation
 
-ln -s ~/Dropbox/Dotfiles/gitconfig ~/.gitconfig
-ln -s ~/Dropbox/Dotfiles/gitignore_global ~/.gitignore_global
-
-ln -s ~/Dropbox/Dotfiles/gemrc ~/.gemrc
-ln -s ~/Dropbox/Dotfiles/pryrc ~/.pryrc
-ln -s ~/Dropbox/Dotfiles/irbrc ~/.irbrc
-ln -s ~/Dropbox/Dotfiles/rvmrc ~/.rvmrc
-ln -s ~/Dropbox/Dotfiles/zshrc ~/.zshrc
-ln -s ~/Dropbox/Dotfiles/IMDB\ this.workflow ~/Library/Services
-ln -s ~/Dropbox/Dotfiles/HexColorPicker.colorPicker ~/Library/ColorPickers
-
-ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
-
-rm -rf ~/.oh-my-zsh/custom/plugins
-ln -s ~/Dropbox/Dotfiles/oh-my-zsh/custom/plugins ~/.oh-my-zsh/custom/plugins
-
-rm -rf ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User
-ln -s ~/Dropbox/Dotfiles/Sublime/Packages/User ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/
-
-rm -rf ~/Library/Application\ Support/Alfred
-ln -s ~/Dropbox/Dotfiles/Alfred ~/Library/Application\ Support
-
-open Inconsolata-dz.otf
-
-ln -s "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl
+```sh
+$ ruby bootstrap.rb
+```
