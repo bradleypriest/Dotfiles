@@ -71,7 +71,8 @@
 	"ignored_packages":
 	[
 		"Pretty JSON",
-		"RSpec"
+		"RSpec",
+		"Color Highlighter"
 	],
 	"rulers":
 	[
