@@ -11,7 +11,10 @@
 		"*.dds",
 		"*.ico",
 		"*.eot",
-		"*.pdf"
+		"*.pdf",
+		"*.ttc",
+		"*.woff",
+		"wkhtmltopdf*"
 	],
 	"bold_folder_labels": true,
 	"color_scheme": "Packages/Color Scheme - Default/Solarized (Dark).tmTheme",

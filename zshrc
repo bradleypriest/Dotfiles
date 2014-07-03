@@ -33,12 +33,42 @@ export PATH=/usr/local/bin:/usr/local/sbin:/Applications/Postgres.app/Contents/V
 export NODE_PATH=/usr/local/lib/node:/usr/local/lib/node_modules:$NODE_PATH
 
 export SSL_CERT_FILE=/usr/local/etc/cacert.pem
+export UNBUNDLED_COMMANDS=foreman
+
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
+
+# Add the following to your ~/.bashrc or ~/.zshrc
+#
+# Alternatively, copy/symlink this file and source in your shell.  See `hitch --setup-path`.
+
+hitch() {
+  command hitch "$@"
+  if [[ -s "$HOME/.hitch_export_authors" ]] ; then source "$HOME/.hitch_export_authors" ; fi
+}
+alias unhitch='hitch -u'
+
+# Uncomment to persist pair info between terminal instances
+# hitch
+
+# Deploys TradeGecko
+#
+# @example
+#   deploy
+#     # => Merges and deploys the local develop branch to master
+function deploy() {
+  git checkout master
+  git merge develop
+  git push origin master
+  rake deploy:production
+}
 
 # Creates a Pull Request from the currently checked out branch
 #
 # @example
 #   create_pull_request
-#     # => Creates a PR with the last commit's message as title
+#     # => Creates a PR with the last commit's message as title prefixed with WIP
 #   create_pull_request "Shiny new flux capacitor"
 #     # => Creates a PR with the provided title
 function create_pull_request() {
@@ -58,28 +88,6 @@ function create_pull_request() {
   else
     target="master"
   fi
-  hub pull-request -m "$title" -b tradegecko:$target -h tradegecko:$branch
+  url=$(hub pull-request -m "$title" -b tradegecko:$target -h tradegecko:$branch)
+  open $url
 }
-
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
-
-function deploy() {
-  git checkout master
-  git merge develop
-  git push origin master
-  git push heroku master
-}
-# Add the following to your ~/.bashrc or ~/.zshrc
-#
-# Alternatively, copy/symlink this file and source in your shell.  See `hitch --setup-path`.
-
-hitch() {
-  command hitch "$@"
-  if [[ -s "$HOME/.hitch_export_authors" ]] ; then source "$HOME/.hitch_export_authors" ; fi
-}
-alias unhitch='hitch -u'
-
-# Uncomment to persist pair info between terminal instances
-# hitch
