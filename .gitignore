@@ -5,3 +5,4 @@ Icon?
 *.cache
 *.alfdb
 *.system-ca-bundle
+license.plist
