@@ -31,6 +31,7 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 export PATH=/usr/local/bin:/usr/local/sbin:/Applications/Postgres.app/Contents/Versions/9.3/bin:/usr/bin:/bin:/usr/sbin:/usr/local/share/npm/bin:/usr/X11/bin:/sbin:~/bin
 export NODE_PATH=/usr/local/lib/node:/usr/local/lib/node_modules:$NODE_PATH
+export CDPATH=$CDPATH:~/Sites
 
 export SSL_CERT_FILE=/usr/local/etc/cacert.pem
 export UNBUNDLED_COMMANDS=foreman
