@@ -24,7 +24,7 @@ DISABLE_AUTO_UPDATE="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(bundler brew git powder rake textmate z heroku)
+plugins=(bundler brew git rake z heroku)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -80,7 +80,7 @@ function create_pull_request() {
   then
     title=$(echo "$1")
   else
-    title="WIP - $(git log -1 --pretty=%B | head -1)"
+    title=$(git log -1 --pretty=%B | head -1)
   fi
   # Target PR to develop branch if exists, otherwise master
   if [ "$(git branch | grep develop)" ]

@@ -47,11 +47,11 @@ class Bootstrap
     def symlink_sublime_directory!
       symlink_folder(
         "Sublime/Packages/User",
-        "#{Dir.home}/Library/Application\ Support/Sublime\ Text\ 2/Packages/User"
+        "#{Dir.home}/Library/Application\ Support/Sublime\ Text\ 3/Packages/User"
       )
 
       # Set up /bin/subl
-      FileUtils.ln_sf "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" "/usr/local/bin/subl"
+      FileUtils.ln_sf "/Applications/Sublime Text 3.app/Contents/SharedSupport/bin/subl" "/usr/local/bin/subl"
     end
 
     def symlink_alfred!

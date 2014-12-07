@@ -17,7 +17,7 @@
 		"wkhtmltopdf*"
 	],
 	"bold_folder_labels": true,
-	"color_scheme": "Packages/Color Scheme - Default/Solarized (Dark).tmTheme",
+	"color_scheme": "Packages/User/Solarized (Dark).tmTheme",
 	"dictionary": "Packages/Language - English/en_GB.dic",
 	"ensure_newline_at_eof_on_save": true,
 	"file_exclude_patterns":
@@ -64,16 +64,13 @@
 		".yardoc",
 		"cache",
 		"capybara",
-		"dist",
-		".zeus.sock",
-		"ember-rails"
+		"dist"
 	],
 	"font_face": "Inconsolata-dz",
 	"font_size": 11.0,
 	"highlight_line": true,
 	"ignored_packages":
 	[
-		"RSpec"
 	],
 	"rulers":
 	[
@@ -82,25 +79,9 @@
 	"scroll_past_end": true,
 	"show_minimap": false,
 	"soda_classic_tabs": true,
+	"soda_folder_icons": false,
 	"tab_size": 2,
-	"theme": "Soda Dark.sublime-theme",
-	"todo":
-	{
-		"case_sensitive": true,
-		"file_exclude_patterns":
-		[
-			"*.yml"
-		],
-		"folder_exclude_patterns":
-		[
-			"vendor",
-			"tmp"
-		],
-		"patterns":
-		{
-			"TODO": "TODO*?[\\s:]+(?P<todo>.*)$"
-		}
-	},
+	"theme": "Soda Dark 3.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,
 	"use_simple_full_screen": true
