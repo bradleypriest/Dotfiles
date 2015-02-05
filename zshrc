@@ -74,7 +74,7 @@ function deploy() {
 #     # => Creates a PR with the provided title
 function create_pull_request() {
   # Get branch name
-  branch=$(git symbolic-ref HEAD | cut -d'/' -f3)
+  branch=$(git symbolic-ref HEAD | cut -d'/' -f3 -f4)
   # Check if a title was provided
   if [ "$1" != "" ]
   then
@@ -90,5 +90,6 @@ function create_pull_request() {
     target="master"
   fi
   url=$(hub pull-request -m "$title" -b tradegecko:$target -h tradegecko:$branch)
+  echo $url | pbcopy
   open $url
 }
