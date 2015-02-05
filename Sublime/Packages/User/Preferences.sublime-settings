@@ -64,7 +64,8 @@
 		".yardoc",
 		"cache",
 		"capybara",
-		"dist"
+		"dist",
+		"node_modules"
 	],
 	"font_face": "Inconsolata-dz",
 	"font_size": 11.0,
