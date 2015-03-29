@@ -1,4 +1,5 @@
 {
-	"watchOnSave": false,
-	"compileOnSave": false
+  "watchOnSave": false,
+  "compileOnSave": false,
+  "binDir": "/usr/local/bin"
 }
