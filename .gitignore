@@ -8,3 +8,4 @@ Icon?
 *.merged-ca-bundle
 *.user-ca-bundle
 license.plist
+Alfred/Alfred.alfredpreferences/*

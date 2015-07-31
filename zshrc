@@ -93,3 +93,12 @@ function create_pull_request() {
   echo $url | pbcopy
   open $url
 }
+
+function open_pull_request() {
+  url=$(hub issue | head -1 | egrep -o 'https://[a-z,0-9:/.]+')
+  open $url
+}
+
+function nom {
+  rm -f node_modules && npm cache clear && npm install
+}

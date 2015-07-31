@@ -17,7 +17,7 @@
 		"wkhtmltopdf*"
 	],
 	"bold_folder_labels": true,
-	"color_scheme": "Packages/User/Solarized (Dark).tmTheme",
+	"color_scheme": "Packages/User/SublimeLinter/Solarized (Dark) (SL).tmTheme",
 	"dictionary": "Packages/Language - English/en_GB.dic",
 	"ensure_newline_at_eof_on_save": true,
 	"file_exclude_patterns":
@@ -65,7 +65,9 @@
 		"cache",
 		"capybara",
 		"dist",
-		"node_modules"
+		"node_modules",
+		"_build",
+		"deps"
 	],
 	"font_face": "Inconsolata-dz",
 	"font_size": 11.0,

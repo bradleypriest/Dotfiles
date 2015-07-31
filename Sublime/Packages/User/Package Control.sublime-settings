@@ -6,8 +6,11 @@
 	"installed_packages":
 	[
 		"Alignment",
+		"All Autocomplete",
+		"Babel",
 		"Better CoffeeScript",
-		"ColorSchemeSelector",
+		"Elixir",
+		"ElixirSublime",
 		"Git",
 		"GitGutter",
 		"GitHubinator",
@@ -15,11 +18,12 @@
 		"Indent XML",
 		"Markdown Preview",
 		"Package Control",
-		"Puppet",
 		"RSpec",
 		"RubyTest",
 		"SCSS",
 		"SideBarEnhancements",
+		"SublimeLinter",
+		"SublimeLinter-jshint",
 		"Theme - Soda"
 	]
 }
