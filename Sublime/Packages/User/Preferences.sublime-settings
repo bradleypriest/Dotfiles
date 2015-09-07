@@ -49,6 +49,7 @@
 		"*.zip",
 		"*-spade.js",
 		"*.sublime-workspace",
+		"filepicker.js",
 		"plupload.full.js"
 	],
 	"folder_exclude_patterns":
@@ -66,8 +67,10 @@
 		"capybara",
 		"dist",
 		"node_modules",
+		"bower_components",
 		"_build",
-		"deps"
+		"deps",
+		"tmp"
 	],
 	"font_face": "Inconsolata-dz",
 	"font_size": 11.0,

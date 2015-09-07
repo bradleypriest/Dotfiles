@@ -51,7 +51,7 @@ class Bootstrap
       )
 
       # Set up /bin/subl
-      FileUtils.ln_sf "/Applications/Sublime Text 3.app/Contents/SharedSupport/bin/subl" "/usr/local/bin/subl"
+      FileUtils.ln_sf "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl", "/usr/local/bin/subl"
     end
 
     def symlink_alfred!
@@ -68,7 +68,7 @@ class Bootstrap
       )
     end
 
-    def symlink_extras
+    def symlink_extras!
       symlink_folder("IMDB\ this.workflow", "#{Dir.home}/Library/Services/IMDB\ this.workflow")
       symlink_folder("HexColorPicker.colorPicker", "#{Dir.home}/Library/ColorPickers/HexColorPicker.colorPicker")
     end

@@ -33,7 +33,6 @@ export PATH=/usr/local/bin:/usr/local/sbin:/Applications/Postgres.app/Contents/V
 export NODE_PATH=/usr/local/lib/node:/usr/local/lib/node_modules:$NODE_PATH
 export CDPATH=$CDPATH:~/Sites
 
-export SSL_CERT_FILE=/usr/local/etc/cacert.pem
 export UNBUNDLED_COMMANDS=foreman
 
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
