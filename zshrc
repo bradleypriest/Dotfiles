@@ -29,7 +29,7 @@ plugins=(bundler brew git rake z heroku)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=/usr/local/bin:/usr/local/sbin:/Applications/Postgres.app/Contents/Versions/9.3/bin:/usr/bin:/bin:/usr/sbin:/usr/local/share/npm/bin:/usr/X11/bin:/sbin:~/bin
+export PATH=/usr/local/bin:/usr/local/sbin:/Applications/Postgres.app/Contents/Versions/9.4/bin:/usr/bin:/bin:/usr/sbin:/usr/local/share/npm/bin:/usr/X11/bin:/sbin:~/bin
 export NODE_PATH=/usr/local/lib/node:/usr/local/lib/node_modules:$NODE_PATH
 export CDPATH=$CDPATH:~/Sites
 
@@ -100,4 +100,9 @@ function open_pull_request() {
 
 function nom {
   rm -f node_modules && npm cache clear && npm install
+}
+
+# Fuzzy checkout
+function gcoo() {
+  git branch | grep $1 | xargs -n 1 git checkout
 }
