@@ -61,7 +61,7 @@ function deploy() {
   git checkout master
   git merge develop
   git push origin master
-  rake deploy:production
+  bundle exec rake deploy:production
 }
 
 # Creates a Pull Request from the currently checked out branch
@@ -99,7 +99,7 @@ function open_pull_request() {
 }
 
 function nom {
-  rm -f node_modules && npm cache clear && npm install
+  rm -rf node_modules && npm cache clear && npm install
 }
 
 # Fuzzy checkout
