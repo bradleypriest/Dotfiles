@@ -82,6 +82,7 @@ class Bootstrap
       symlink_extras!
       copy_iterm_profile!
       install_fonts!
+      printf 'Now update ~/.gitconfig to refer to your GitHub username instead of mine :)'
     end
 
   private
