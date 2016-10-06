@@ -7,5 +7,7 @@ Icon?
 *.system-ca-bundle
 *.merged-ca-bundle
 *.user-ca-bundle
+*.crt
 license.plist
 Alfred/Alfred.alfredpreferences/*
+Package Control.cache/*

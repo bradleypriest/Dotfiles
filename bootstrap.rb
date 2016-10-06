@@ -87,7 +87,11 @@ class Bootstrap
   private
 
     def print_link(src, dest)
-      printf " %15s -> %s\n", src, dest.gsub!('/Users/bradley', '~')
+      printf " %15s -> %s\n", src, dest.gsub!("/Users/#{username}", '~')
+    end
+
+    def username
+      `whoami`
     end
 
     def file_exists? (file)
