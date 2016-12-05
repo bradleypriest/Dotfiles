@@ -51,7 +51,7 @@ class Bootstrap
       )
 
       # Set up /bin/subl
-      FileUtils.ln_sf "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl", "/usr/local/bin/subl"
+      FileUtils.ln_sf "/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl", "/usr/local/bin/subl"
     end
 
     def symlink_alfred!

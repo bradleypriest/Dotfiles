@@ -11,13 +11,11 @@
 		"Babel",
 		"Better CoffeeScript",
 		"Elixir",
-		"ElixirSublime",
 		"Git",
 		"GitGutter",
 		"GitHubinator",
 		"Handlebars",
 		"Indent XML",
-		"JSCS-Formatter",
 		"Markdown Preview",
 		"Package Control",
 		"RSpec",
@@ -25,6 +23,7 @@
 		"SCSS",
 		"SideBarEnhancements",
 		"SublimeLinter",
+		"SublimeLinter-contrib-eslint",
 		"SublimeLinter-jshint",
 		"Theme - Soda"
 	]

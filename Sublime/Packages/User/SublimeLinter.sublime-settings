@@ -13,7 +13,7 @@
 		{
 			"elixirlinter":
 			{
-				"@disable": false,
+				"@disable": true,
 				"args":
 				[
 				],
@@ -21,15 +21,21 @@
 				[
 				]
 			},
+			"eslint":
+			{
+				"@disable": false,
+				"args":
+				[
+				],
+				"excludes": "*.es6"
+			},
 			"jshint":
 			{
 				"@disable": false,
 				"args":
 				[
 				],
-				"excludes":
-				[
-				]
+				"excludes": "*.js"
 			}
 		},
 		"mark_style": "stippled underline",
