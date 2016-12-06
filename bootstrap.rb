@@ -4,7 +4,7 @@ require 'fileutils'
 class Bootstrap
   class << self
     def dotfiles
-      ['gemrc', 'gitconfig', 'gitignore_global', 'irbrc', 'pryrc', 'zshrc']
+      ['gemrc', 'gitconfig', 'gitignore_global', 'irbrc', 'pryrc', 'railsrc', 'zshrc']
     end
 
     def symlink_dotfiles!
