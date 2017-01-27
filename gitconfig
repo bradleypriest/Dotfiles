@@ -20,6 +20,7 @@
 	enabled = true
 [merge]
 	stat = true
+	conflictstyle = diff3
 [push]
 	default = current
 

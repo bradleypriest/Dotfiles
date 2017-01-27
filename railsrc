@@ -1,3 +1,4 @@
 -B
 -d postgresql
 --skip-turbolinks
+--skip-action-cable

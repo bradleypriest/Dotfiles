@@ -29,7 +29,7 @@ plugins=(bundler brew git rake z heroku)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=/usr/local/bin:/usr/local/sbin:/Applications/Postgres.app/Contents/Versions/9.4/bin:/usr/bin:/bin:/usr/sbin:/usr/local/share/npm/bin:/usr/X11/bin:/sbin:~/bin
+export PATH=/usr/local/bin:/usr/local/sbin:/Applications/Postgres.app/Contents/Versions/latest/bin:/usr/bin:/bin:/usr/sbin:/usr/local/share/npm/bin:/usr/X11/bin:/sbin:~/bin
 export NODE_PATH=/usr/local/lib/node:/usr/local/lib/node_modules:$NODE_PATH
 export CDPATH=$CDPATH:~/Sites
 
@@ -93,9 +93,22 @@ function create_pull_request() {
   open $url
 }
 
-function open_pull_request() {
-  url=$(hub issue | head -1 | egrep -o 'https://[a-z,0-9:/.]+')
-  open $url
+# Opens the Compare View on Github for the currently checked-out branch
+#
+# @example
+#   open_compare
+#     # => Opens the compare view in your browser
+function open_compare() {
+  # Get branch name
+  branch=$(git symbolic-ref HEAD | cut -d'/' -f3 -f4)
+  # Target develop branch if exists, otherwise master
+  if [ "$(git branch | grep develop)" ]
+  then
+    target="develop"
+  else
+    target="master"
+  fi
+  hub compare $target...$branch
 }
 
 function nom {

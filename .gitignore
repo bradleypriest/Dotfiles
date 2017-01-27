@@ -10,4 +10,5 @@ Icon?
 *.crt
 license.plist
 Alfred/Alfred.alfredpreferences/*
+Alfred/usage.data
 Package Control.cache/*
