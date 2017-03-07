@@ -79,7 +79,7 @@ function create_pull_request() {
   then
     title=$(echo "$1")
   else
-    title=$(git log -1 --pretty=%B | head -1)
+    title=$(git log -1 --pretty=%B)
   fi
   # Target PR to develop branch if exists, otherwise master
   if [ "$(git branch | grep develop)" ]

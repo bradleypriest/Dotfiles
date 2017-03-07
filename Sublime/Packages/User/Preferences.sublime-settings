@@ -74,7 +74,7 @@
 		"tmp"
 	],
 	"font_face": "Inconsolata-dz",
-	"font_size": 10,
+	"font_size": 14,
 	"highlight_line": true,
 	"ignored_packages":
 	[
