@@ -20,15 +20,20 @@
 	enabled = true
 [merge]
 	stat = true
+	ff = only
 	conflictstyle = diff3
 [push]
 	default = current
-
 [hub]
 protocol = https
 [rebase]
 	autosquash = true
+	autostash = true
 [filter "lfs"]
 	smudge = git-lfs smudge %f
 	required = true
 	clean = git-lfs clean %f
+[gpg]
+	program = gpg1
+[alias]
+	praise = blame

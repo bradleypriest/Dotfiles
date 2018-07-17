@@ -48,10 +48,9 @@
 		"*.scssc",
 		"*.cssc",
 		"*.zip",
-		"*-spade.js",
 		"*.sublime-workspace",
-		"filepicker.js",
-		"plupload.full.js"
+		"yarn.lock",
+		"papers_manifest.yml"
 	],
 	"folder_exclude_patterns":
 	[
@@ -74,7 +73,7 @@
 		"tmp"
 	],
 	"font_face": "Inconsolata-dz",
-	"font_size": 14,
+	"font_size": 12,
 	"highlight_line": true,
 	"ignored_packages":
 	[
