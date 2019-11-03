@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+# frozen_string_literal: true
+
+]]></content>
+  <tabTrigger>fr</tabTrigger>
+  <scope>source.ruby</scope>
+</snippet>

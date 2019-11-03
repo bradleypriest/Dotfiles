@@ -3,4 +3,4 @@ tmp/restart.txt
 .pry_history
 .sass-cache
 .bundle/config
-zeus.json
+.eslintcache

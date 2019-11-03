@@ -14,7 +14,6 @@
 		"Elixir",
 		"Fix Mac Path",
 		"Git",
-		"GitGutter",
 		"GitHubinator",
 		"Handlebars",
 		"Indent XML",
@@ -25,7 +24,10 @@
 		"SCSS",
 		"SideBarEnhancements",
 		"SublimeLinter",
+		"SublimeLinter-contrib-yamllint",
 		"SublimeLinter-eslint",
+		"SublimeLinter-json",
+		"SublimeLinter-rubocop",
 		"Theme - Soda"
 	]
 }

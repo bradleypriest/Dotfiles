@@ -25,7 +25,7 @@
 [push]
 	default = current
 [hub]
-protocol = https
+	protocol = https
 [rebase]
 	autosquash = true
 	autostash = true
@@ -35,5 +35,10 @@ protocol = https
 	clean = git-lfs clean %f
 [gpg]
 	program = gpg1
+[help]
+	autocorrect = 1
 [alias]
 	praise = blame
+	lb = branch --sort=committerdate
+	pruneb = !git lb branch --merged master | grep -v -e 'master' -e '\\*' | xargs -n 1 git branch -d && git remote prune origin
+	remove-untracked = clean -fx

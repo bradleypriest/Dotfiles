@@ -2,3 +2,6 @@
 -d postgresql
 --skip-turbolinks
 --skip-action-cable
+--skip-action-mailbox
+--skip-action-text
+--skip-webpack-install

@@ -50,7 +50,8 @@
 		"*.zip",
 		"*.sublime-workspace",
 		"yarn.lock",
-		"papers_manifest.yml"
+		"papers_manifest.yml",
+		".eslintcache"
 	],
 	"folder_exclude_patterns":
 	[
