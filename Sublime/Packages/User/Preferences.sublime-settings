@@ -64,7 +64,6 @@
 		"flat-html",
 		"psds",
 		".yardoc",
-		"cache",
 		"dist",
 		"node_modules",
 		"bower_components",
@@ -73,7 +72,7 @@
 		"tmp"
 	],
 	"font_face": "Inconsolata-dz",
-	"font_size": 16,
+	"font_size": 18,
 	"highlight_line": true,
 	"ignored_packages":
 	[

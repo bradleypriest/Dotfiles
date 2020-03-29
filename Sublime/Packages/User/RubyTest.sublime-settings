@@ -1,6 +1,10 @@
 {
-  "run_rspec_command": "source ~/.zshrc; bin/rspec {relative_path}",
-  "run_single_rspec_command": "source ~/.zshrc; bin/rspec {relative_path}:{line_number}",
+  "check_for_rbenv": true,
+  "check_for_bundler": true,
+  "check_for_spring": false,
+
+  "run_rspec_command": "bin/rspec {relative_path}",
+  "run_single_rspec_command": "bin/rspec {relative_path}:{line_number}",
 
   "run_ruby_unit_command": "rake test {relative_path}",
   "run_single_ruby_unit_command": "rake test {relative_path} TESTOPTS='--name {test_name}'"

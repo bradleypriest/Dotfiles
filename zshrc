@@ -30,14 +30,22 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 export PATH=/usr/local/bin:/usr/local/sbin:/Applications/Postgres.app/Contents/Versions/latest/bin:/usr/bin:/bin:/usr/sbin:/usr/local/share/npm/bin:/usr/X11/bin:/sbin:~/bin
+
 export NODE_PATH=/usr/local/lib/node:/usr/local/lib/node_modules:$NODE_PATH
 export CDPATH=$CDPATH:~/Sites
 
 export UNBUNDLED_COMMANDS=foreman
 
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+# heroku autocomplete setup
+HEROKU_AC_ZSH_SETUP_PATH=/Users/bradleypriest/Library/Caches/heroku/autocomplete/zsh_setup && test -f $HEROKU_AC_ZSH_SETUP_PATH && source $HEROKU_AC_ZSH_SETUP_PATH;
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # Add the following to your ~/.bashrc or ~/.zshrc
 #
@@ -48,21 +56,6 @@ hitch() {
   if [[ -s "$HOME/.hitch_export_authors" ]] ; then source "$HOME/.hitch_export_authors" ; fi
 }
 alias unhitch='hitch -u'
-
-# Uncomment to persist pair info between terminal instances
-# hitch
-
-# Deploys TradeGecko
-#
-# @example
-#   deploy
-#     # => Merges and deploys the local develop branch to master
-function deploy() {
-  git checkout master
-  git merge develop
-  git push origin master
-  bundle exec rake deploy:production
-}
 
 # Creates a Pull Request from the currently checked out branch
 #
@@ -112,10 +105,61 @@ function open_compare() {
 }
 
 function nom {
-  rm -rf node_modules && npm cache clear && npm install
+  rm -rf node_modules && npm cache clear --force && npm install --production --no-optional
 }
 
 # Fuzzy checkout
 function gcoo() {
   git branch | grep $1 | xargs -n 1 git checkout
 }
+
+# Modified slightly from https://gist.github.com/zeroeth/8013177
+function git-branch-status() {
+  if [ "$(git branch | grep develop)" ]
+  then
+    target="develop"
+  else
+    target="master"
+  fi
+
+  git for-each-ref --format="%(refname:short) %(upstream:short)" refs/heads | \
+  while read local remote
+  do
+      if [ -x $remote ]; then
+          branches=("$local")
+      else
+          branches=("$local" "$remote")
+      fi;
+      for branch in ${branches[@]}; do
+          target="$target"
+          git rev-list --left-right ${branch}...${target} -- 2>/dev/null >/tmp/git_upstream_status_delta || continue
+          LEFT_AHEAD=$(grep -c '^<' /tmp/git_upstream_status_delta)
+          RIGHT_AHEAD=$(grep -c '^>' /tmp/git_upstream_status_delta)
+
+      COLOR="MEOW"
+      if [ "$LEFT_AHEAD" -eq "0" ]; then
+        if [ "$RIGHT_AHEAD" -eq "0" ]; then
+          # NOTHING NEW AND EQUAL
+          COLOR="\033[0;35m-"
+        else
+          # NOTHING NEW AND BEHIND
+          COLOR="\033[0;33m↓"
+        fi;
+      else
+        if [ "$RIGHT_AHEAD" -eq "0" ]; then
+          # NEW AND UP TO DATE
+          COLOR="\033[0;32m↑"
+        else
+          # NEW AND BEHIND
+          COLOR="\033[0;31m↕"
+        fi;
+      fi;
+        # printf "$COLOR %-40s (ahead %2d) | (behind %4d) $target\n" $branch $LEFT_AHEAD $RIGHT_AHEAD
+        printf "$COLOR %-40s | (behind %5d)\n" $branch $RIGHT_AHEAD
+      done
+  done | grep -v "^develop" | grep -v "master" | grep -v "origin" | uniq | sort -rsk 4
+}
+
+export TRADEGECKO_LOGIN_ID=13
+export BUNDLE_MAJOR_DEPRECATIONS=1
+export JS_DRIVER=chrome

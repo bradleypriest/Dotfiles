@@ -14,6 +14,8 @@
 	<false/>
 	<key>AppleAntiAliasingThreshold</key>
 	<integer>1</integer>
+	<key>ApplePressAndHoldEnabled</key>
+	<false/>
 	<key>AppleScrollAnimationEnabled</key>
 	<integer>0</integer>
 	<key>AppleSmoothFixedFontsSizeThreshold</key>
@@ -3049,19 +3051,33 @@
 	<key>NoSyncAllAppVersions</key>
 	<array>
 		<string>3.3.3beta1</string>
+		<string>3.3.8beta3</string>
 		<string>3.3.5beta2</string>
 		<string>3.3.7beta1</string>
 		<string>3.3.2beta1</string>
-		<string>3.3.0beta12</string>
-		<string>3.3.0beta13</string>
-		<string>3.3.0beta15</string>
+		<string>3.3.7beta3</string>
+		<string>3.3.8beta5</string>
 		<string>3.3.5beta1</string>
 		<string>3.3.0beta8</string>
+		<string>3.3.0beta15</string>
 		<string>3.3.0beta16</string>
+		<string>3.3.0beta13</string>
+		<string>3.3.0beta12</string>
 		<string>3.3.5beta3</string>
 		<string>3.3.3beta2</string>
 		<string>3.3.4beta1</string>
 		<string>3.3.7beta2</string>
+		<string>3.3.7beta4</string>
+		<string>3.3.8beta1</string>
+		<string>3.3.8beta4</string>
+		<string>3.3.9beta1</string>
+		<string>3.3.10beta1</string>
+		<string>3.3.10beta2</string>
+	</array>
+	<key>NoSyncBFPRecents</key>
+	<array>
+		<string>Andale Mono</string>
+		<string>Inconsolata-dz</string>
 	</array>
 	<key>NoSyncDoNotWarnBeforeMultilinePaste</key>
 	<true/>
@@ -3088,7 +3104,7 @@
 	<key>NoSyncLastTipTime</key>
 	<real>542274447.38213301</real>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>102</integer>
+	<integer>157</integer>
 	<key>NoSyncNeverRemindPrefsChangesCopy</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
@@ -3844,32 +3860,6 @@
 		<key>Initial Directory</key>
 		<string>/Users/bradleypriest/Desktop</string>
 	</dict>
-	<key>NoSyncSearchHistory</key>
-	<array>
-		<string>UselessComparison</string>
-		<string>LiteralInInterpolation</string>
-		<string>BigDecimalNew</string>
-		<string>InterpolationCheck</string>
-		<string>ParenthesesAsGroupedExpression</string>
-		<string>Void</string>
-		<string>BooleanSymbol</string>
-		<string>NestedMethodDefinition</string>
-		<string>ImplicitStringConcatenation</string>
-		<string>AmbiguousBlockAssociation</string>
-	</array>
-	<key>NoSyncSearchHistory2</key>
-	<array>
-		<string>ecmasc</string>
-		<string>esmas</string>
-		<string>::ES6</string>
-		<string>reticula</string>
-		<string>redicu</string>
-		<string>defla</string>
-		<string>defa</string>
-		<string>redis</string>
-		<string>config_or_envconfig_or_env</string>
-		<string>pool_name</string>
-	</array>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
 	<real>502773086.30457199</real>
 	<key>NoSyncTipsToNotShow</key>
@@ -3940,9 +3930,9 @@
 	<key>PromptOnQuit</key>
 	<false/>
 	<key>QuickPasteBytesPerCall</key>
-	<integer>193</integer>
+	<integer>289</integer>
 	<key>QuickPasteDelayBetweenCalls</key>
-	<real>0.052701652050018311</real>
+	<real>0.035134434700012207</real>
 	<key>QuitWhenAllWindowsClosed</key>
 	<false/>
 	<key>RightCommand</key>
@@ -3960,7 +3950,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2019-10-31T08:52:21Z</date>
+	<date>2020-03-22T05:05:01Z</date>
 	<key>SUUpdateRelaunchingMarker</key>
 	<false/>
 	<key>SavePasteHistory</key>
@@ -3968,7 +3958,7 @@
 	<key>ShowBookmarkName</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>
-	<false/>
+	<true/>
 	<key>ShowMetalFPSmeter</key>
 	<true/>
 	<key>ShowPaneTitles</key>
@@ -4020,10 +4010,10 @@
 	<key>findIgnoreCase_iTerm</key>
 	<true/>
 	<key>findMode_iTerm</key>
-	<integer>3</integer>
+	<integer>1</integer>
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.3.7beta2</string>
+	<string>3.3.10beta2</string>
 </dict>
 </plist>
