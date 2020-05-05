@@ -1798,7 +1798,7 @@
 			<key>HotKey Window Animates</key>
 			<true/>
 			<key>HotKey Window AutoHides</key>
-			<false/>
+			<true/>
 			<key>HotKey Window Dock Click Action</key>
 			<integer>0</integer>
 			<key>HotKey Window Floats</key>
@@ -3073,6 +3073,7 @@
 		<string>3.3.9beta1</string>
 		<string>3.3.10beta1</string>
 		<string>3.3.10beta2</string>
+		<string>3.3.10beta3</string>
 	</array>
 	<key>NoSyncBFPRecents</key>
 	<array>
@@ -3104,7 +3105,7 @@
 	<key>NoSyncLastTipTime</key>
 	<real>542274447.38213301</real>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>157</integer>
+	<integer>180</integer>
 	<key>NoSyncNeverRemindPrefsChangesCopy</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
@@ -3873,7 +3874,7 @@
 	<key>OpenArrangementAtStartup</key>
 	<false/>
 	<key>OpenBookmark</key>
-	<false/>
+	<true/>
 	<key>OpenNoWindowsAtStartup</key>
 	<true/>
 	<key>OpenTmuxWindowsIn</key>
@@ -3950,7 +3951,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2020-03-22T05:05:01Z</date>
+	<date>2020-05-01T06:16:59Z</date>
 	<key>SUUpdateRelaunchingMarker</key>
 	<false/>
 	<key>SavePasteHistory</key>
@@ -3958,7 +3959,7 @@
 	<key>ShowBookmarkName</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>
-	<true/>
+	<false/>
 	<key>ShowMetalFPSmeter</key>
 	<true/>
 	<key>ShowPaneTitles</key>
@@ -4014,6 +4015,6 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.3.10beta2</string>
+	<string>3.3.10beta3</string>
 </dict>
 </plist>

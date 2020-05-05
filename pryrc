@@ -1,5 +1,12 @@
 # Prompt with ruby version
-Pry.prompt = [proc { |obj, nest_level| "#{RUBY_VERSION} (#{obj}):#{nest_level} > " }, proc { |obj, nest_level| "#{RUBY_VERSION} (#{obj}):#{nest_level} * " }]
+Pry.config.prompt = Pry::Prompt.new(
+  "ruby",
+  "Ruby Version",
+  [
+    proc { |obj, nest_level| "#{RUBY_VERSION} [#{ Rails.application.class.module_parent_name}] (#{obj}):#{nest_level} > " },
+    proc { |obj, nest_level| "#{RUBY_VERSION} (#{obj}):#{nest_level} * " }
+  ]
+)
 
 # Pry + Hirb - https://github.com/pry/pry/wiki/FAQ#wiki-hirb
 begin
@@ -26,23 +33,6 @@ if defined? Hirb
   end
 
   Hirb.enable
-end
-
-# Woo! - Copy-Paste
-def pbcopy(input)
-  str = input.to_s
-  IO.popen('pbcopy', 'w') { |f| f << str }
-  str
-end
-
-class Array
-  def occurrences
-    # make the hash default to 0 so that += will work correctly
-    h = Hash.new(0)
-    # iterate over the array, counting duplicate entries
-    self.each { |v| h[v] += 1 }
-    h
-  end
 end
 
 if defined?(PryRails::RAILS_PROMPT)

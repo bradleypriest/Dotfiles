@@ -113,6 +113,46 @@ function gcoo() {
   git branch | grep $1 | xargs -n 1 git checkout
 }
 
+# git-auto-rebase
+# git-auto-rebase --force-push
+function git-auto-rebase() {
+  if [ "$(git branch | grep develop)" ]
+  then
+    target="develop"
+  else
+    target="master"
+  fi
+
+  if [[ $@ = "--force-push" ]]
+  then
+    push=true
+  else
+    push=false
+  fi
+
+  git for-each-ref --format="%(refname:short)" refs/heads | \
+  while read branch
+  do
+    git checkout $branch &> /dev/null
+    git rebase $target &> /dev/null
+
+    if [ "$?" = 0 ]
+    then
+      COLOR="\033[0;32m✔"
+      message="successfully rebased"
+      if [ "$push" = true ]
+      then
+        git push origin $branch --force
+      fi
+    else
+      git rebase --abort
+      COLOR="\033[0;31m✘"
+      message="failed to rebase, skipping"
+    fi
+    printf "$COLOR %-40s | %s\n" $branch $message
+  done
+}
+
 # Modified slightly from https://gist.github.com/zeroeth/8013177
 function git-branch-status() {
   if [ "$(git branch | grep develop)" ]
