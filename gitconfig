@@ -11,6 +11,7 @@
 	whitespace = trailing-space,space-before-tab
 	excludesfile = ~/.gitignore_global
 	trustctime = false
+	attributesfile = ~/.gitattributes
 [diff]
 	renames = copies
 [branch]

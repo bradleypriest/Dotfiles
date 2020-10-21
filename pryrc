@@ -6,7 +6,7 @@ Pry.config.prompt = Pry::Prompt.new(
     proc { |obj, nest_level| "#{RUBY_VERSION} [#{ Rails.application.class.module_parent_name}] (#{obj}):#{nest_level} > " },
     proc { |obj, nest_level| "#{RUBY_VERSION} (#{obj}):#{nest_level} * " }
   ]
-)
+) if defined?(Rails) && Rails.respond_to?(:application)
 
 # Pry + Hirb - https://github.com/pry/pry/wiki/FAQ#wiki-hirb
 begin
@@ -37,4 +37,10 @@ end
 
 if defined?(PryRails::RAILS_PROMPT)
   Pry.config.prompt = PryRails::RAILS_PROMPT
+end
+
+if defined?(Doorkeeper::AccessToken)
+  Doorkeeper::AccessToken.define_method :siblings do
+    self.class.where(resource_owner_id: resource_owner_id, application_id: application_id).order(created_at: :desc)
+  end
 end

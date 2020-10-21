@@ -50,7 +50,6 @@
 		"*.zip",
 		"*.sublime-workspace",
 		"yarn.lock",
-		"papers_manifest.yml",
 		".eslintcache"
 	],
 	"folder_exclude_patterns":
@@ -72,7 +71,7 @@
 		"tmp"
 	],
 	"font_face": "Inconsolata-dz",
-	"font_size": 18,
+	"font_size": 21,
 	"highlight_line": true,
 	"ignored_packages":
 	[

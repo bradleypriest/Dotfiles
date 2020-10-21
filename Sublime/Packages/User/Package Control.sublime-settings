@@ -25,6 +25,7 @@
 		"SublimeLinter-eslint",
 		"SublimeLinter-json",
 		"SublimeLinter-rubocop",
-		"Theme - Soda"
+		"Theme - Soda",
+		"TypeScript Syntax"
 	]
 }
