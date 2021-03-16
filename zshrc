@@ -2,7 +2,6 @@
 
 export ZSH=$HOME/.oh-my-zsh
 export EDITOR=subl
-# eval "$(hub alias -s)"
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -36,26 +35,13 @@ export CDPATH=$CDPATH:~/Sites
 
 export UNBUNDLED_COMMANDS=foreman
 
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+if which rbenv > /dev/null; then eval "$(rbenv init - zsh)"; fi
+if which fnm > /dev/null; then eval "$(fnm env)"; fi
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 # heroku autocomplete setup
-HEROKU_AC_ZSH_SETUP_PATH=/Users/bradleypriest/Library/Caches/heroku/autocomplete/zsh_setup && test -f $HEROKU_AC_ZSH_SETUP_PATH && source $HEROKU_AC_ZSH_SETUP_PATH;
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-# Add the following to your ~/.bashrc or ~/.zshrc
-#
-# Alternatively, copy/symlink this file and source in your shell.  See `hitch --setup-path`.
-
-hitch() {
-  command hitch "$@"
-  if [[ -s "$HOME/.hitch_export_authors" ]] ; then source "$HOME/.hitch_export_authors" ; fi
-}
-alias unhitch='hitch -u'
+HEROKU_AC_ZSH_SETUP_PATH=~/Library/Caches/heroku/autocomplete/zsh_setup && test -f $HEROKU_AC_ZSH_SETUP_PATH && source $HEROKU_AC_ZSH_SETUP_PATH;
 
 # Creates a Pull Request from the currently checked out branch
 #
@@ -78,12 +64,14 @@ function create_pull_request() {
   if [ "$(git branch | grep develop)" ]
   then
     target="develop"
+  elif [ "$(git branch | grep main)" ]
+  then
+    target="main"
   else
     target="master"
   fi
-  url=$(hub pull-request -m "$title" -b tradegecko:$target -h tradegecko:$branch)
+  url=$(gh pr create --title "$title" --base tradegecko:$target --head tradegecko:$branch --web)
   echo $url | pbcopy
-  open $url
 }
 
 # Opens the Compare View on Github for the currently checked-out branch
@@ -92,16 +80,23 @@ function create_pull_request() {
 #   open_compare
 #     # => Opens the compare view in your browser
 function open_compare() {
+  repo=$(gh repo view | head -1 | awk '{print $2}')
+
   # Get branch name
   branch=$(git symbolic-ref HEAD | cut -d'/' -f3 -f4)
-  # Target develop branch if exists, otherwise master
+
+  # Target develop branch if exists, then main, otherwise master
   if [ "$(git branch | grep develop)" ]
   then
     target="develop"
+  elif [ "$(git branch | grep main)" ]
+  then
+    target="main"
   else
     target="master"
   fi
-  hub compare $target...$branch
+
+  open -a Firefox "https://github.com/$repo/compare/$target...$branch"
 }
 
 function nom {
