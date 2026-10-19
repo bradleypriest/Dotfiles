@@ -1,7 +1,8 @@
 # Dotfiles
 
-Mise manages the Git, zsh, and Ruby configuration in this repository. Keep the checkout at
-`~/.dotfiles`, outside Dropbox, so apps can use Git without reading Dropbox.
+Mise manages Git, zsh, Ruby, mise, and VS Code settings in this repository.
+Keep the checkout at `~/.dotfiles`, outside Dropbox, so apps can use the settings
+without reading Dropbox.
 
 ## Set up a machine
 
@@ -18,8 +19,7 @@ mise dot apply
 mise dot status
 ```
 
-Mise copies the Git, zsh, and Ruby files declared in `mise.toml` into your home
-directory. Back up existing files before applying.
+Mise copies the files declared in `mise.toml` into your home directory. Back up existing files before applying.
 If mise reports a conflict, compare the files before using `mise dot apply --force`.
 
 For an existing Dropbox setup, back up both each symlink and its contents before
@@ -36,7 +36,7 @@ mise dot diff
 mise dot apply
 mise dot status
 git diff
-git add gitconfig gitattributes gitignore_global zshrc zprofile gemrc irbrc railsrc
+git add gitconfig gitattributes gitignore_global zshrc zprofile gemrc irbrc railsrc mise vscode
 git commit -m "Update configuration"
 git push
 ```
@@ -82,6 +82,18 @@ Jbuilder, Thruster, and Kamal setup.
 
 Mise removes `~/.pryrc` and `~/.rvmrc` when applying the configuration.
 
+## Mise and VS Code settings
+
+`mise/config.toml` is copied to `~/.config/mise/config.toml`. It contains global
+runtime choices and mise options. The repository's root `mise.toml` declares
+which dotfiles to install.
+
+`vscode/settings.json` is copied to
+`~/Library/Application Support/Code/User/settings.json` on macOS. It contains
+editor preferences and Ruby LSP settings. VS Code can update its installed copy,
+so capture changes with `mise dot add --changed --no-apply` before applying the
+repository version again.
+
 ## Older configuration
 
 Alfred, Sublime Text, iTerm, HexColorPicker, and Inconsolata files have been
@@ -91,5 +103,4 @@ removes the old HexColorPicker installation from `~/Library/ColorPickers`.
 Legacy Ember, Vim, and IMDB workflow files have also been removed. Mise removes
 the broken `~/.ember-cli` link.
 
-Mise applies Git, zsh, and Ruby configuration. The old `bootstrap.rb` command
-runs mise for those files.
+The old `bootstrap.rb` command runs mise for the declared configuration files.

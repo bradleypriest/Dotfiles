@@ -1,0 +1,30 @@
+{
+    "update.showReleaseNotes": false,
+    "editor.tabSize": 2,
+    "editor.fontFamily": "Cascadia Mono,Menlo, Monaco, 'Courier New', monospace",
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true,
+    "workbench.sideBar.location": "right",
+    "[python]": {
+        "editor.formatOnType": true
+    },
+    "rubyLsp.rubyVersionManager": {
+        "identifier": "mise"
+    },
+    "rubyLsp.enabledFeatures": {
+        "diagnostics": false
+    },
+    "rubyLsp.featuresConfiguration": {},
+    "rubyLsp.featureFlags": {
+        "all": true
+    },
+    "gitblame.statusBarMessageClickAction": "Open tool URL",
+    "vscode-erb-beautify.keepBlankLines": 1,
+    "[erb]": {
+        "editor.defaultFormatter": "aliariff.vscode-erb-beautify"
+    },
+    "rubyLsp.addonSettings": {},
+    "workbench.startupEditor": "none",
+    "workbench.secondarySideBar.defaultVisibility": "hidden",
+    "chat.disableAIFeatures": true,
+}
