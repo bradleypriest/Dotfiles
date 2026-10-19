@@ -15,3 +15,4 @@
 "~/.pryrc" = { mode = "absent" }
 "~/.rvmrc" = { mode = "absent" }
 "~/Library/ColorPickers/HexColorPicker.colorPicker" = { mode = "absent" }
+"~/.ember-cli" = { mode = "absent" }

@@ -88,6 +88,8 @@ Alfred, Sublime Text, iTerm, HexColorPicker, and Inconsolata files have been
 removed. Their committed versions remain available in Git history. Mise also
 removes the old HexColorPicker installation from `~/Library/ColorPickers`.
 
-Legacy Ember, Vim, and IMDB workflow files remain for review. Mise currently
-applies Git, zsh, and Ruby configuration. The old `bootstrap.rb` command runs
-mise for those files.
+Legacy Ember, Vim, and IMDB workflow files have also been removed. Mise removes
+the broken `~/.ember-cli` link.
+
+Mise applies Git, zsh, and Ruby configuration. The old `bootstrap.rb` command
+runs mise for those files.
