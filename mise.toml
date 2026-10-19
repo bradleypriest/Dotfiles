@@ -6,3 +6,11 @@
 
 "~/.zshrc" = { source = "zshrc", mode = "copy" }
 "~/.zprofile" = { source = "zprofile", mode = "copy" }
+
+"~/.gemrc" = { source = "gemrc", mode = "copy" }
+"~/.irbrc" = { source = "irbrc", mode = "copy" }
+"~/.railsrc" = { source = "railsrc", mode = "copy" }
+
+# Retire configuration for tools that are no longer used.
+"~/.pryrc" = { mode = "absent" }
+"~/.rvmrc" = { mode = "absent" }

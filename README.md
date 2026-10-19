@@ -1,6 +1,6 @@
 # Dotfiles
 
-Mise manages the Git and zsh configuration in this repository. Keep the checkout at
+Mise manages the Git, zsh, and Ruby configuration in this repository. Keep the checkout at
 `~/.dotfiles`, outside Dropbox, so apps can use Git without reading Dropbox.
 
 ## Set up a machine
@@ -18,8 +18,8 @@ mise dot apply
 mise dot status
 ```
 
-Mise copies `gitconfig`, `gitattributes`, `gitignore_global`, `zshrc`, and
-`zprofile` into the matching hidden files in your home directory. Back up existing files before applying.
+Mise copies the Git, zsh, and Ruby files declared in `mise.toml` into your home
+directory. Back up existing files before applying.
 If mise reports a conflict, compare the files before using `mise dot apply --force`.
 
 For an existing Dropbox setup, back up both each symlink and its contents before
@@ -36,8 +36,8 @@ mise dot diff
 mise dot apply
 mise dot status
 git diff
-git add gitconfig gitattributes gitignore_global zshrc zprofile
-git commit -m "Update Git settings"
+git add gitconfig gitattributes gitignore_global zshrc zprofile gemrc irbrc railsrc
+git commit -m "Update configuration"
 git push
 ```
 
@@ -70,8 +70,20 @@ Completions installed in `~/.local/share/zsh/site-functions` are registered befo
 Oh My Zsh initializes completion. The Tailscale app alias is added when installed.
 Start a new terminal after applying shell changes.
 
+## Ruby configuration
+
+Ruby versions are managed by mise. IRB uses its default settings, with an
+`enable_logging!` helper to send Active Record SQL logs to the console.
+The old gem-loading helpers and Pry/Hirb customization have been removed.
+
+`gemrc` disables documentation generation during gem installation. `railsrc`
+uses PostgreSQL for new apps, skips automatic bundle installation, and skips
+Jbuilder, Thruster, and Kamal setup.
+
+Mise removes `~/.pryrc` and `~/.rvmrc` when applying the configuration.
+
 ## Older configuration
 
-The Ruby, editor, and app settings remain in the repository for reference.
-Mise currently applies the three Git files and the two zsh files. The old
-`bootstrap.rb` command runs mise for those files.
+The older editor and app settings remain in the repository for reference.
+Mise currently applies Git, zsh, and Ruby configuration. The old `bootstrap.rb`
+command runs mise for those files.

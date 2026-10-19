@@ -1,2 +1,0 @@
-export rvm_path="$HOME/.rvm"
-export USE_BUNDLER=force
