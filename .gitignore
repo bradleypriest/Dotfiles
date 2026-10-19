@@ -3,15 +3,11 @@ Icon?
 *.pyc
 *.last-run
 *.cache
-*.alfdb
 *.system-ca-bundle
 *.merged-ca-bundle
 *.user-ca-bundle
 *.crt
 license.plist
-Alfred/Alfred.alfredpreferences/*
-Alfred/usage.data
-Package Control.cache/*
 
 # Local settings and macOS metadata
 .DS_Store

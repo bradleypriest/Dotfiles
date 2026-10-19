@@ -1,5 +1,0 @@
-{
-   "cmd": ["$packages/User/jslint/osx/jsl", "-process", "$file"],
-   "selector": "source.js",
-   "file_regex": "(.*?)\\(([0-9]+?)\\)"
-}

@@ -84,6 +84,10 @@ Mise removes `~/.pryrc` and `~/.rvmrc` when applying the configuration.
 
 ## Older configuration
 
-The older editor and app settings remain in the repository for reference.
-Mise currently applies Git, zsh, and Ruby configuration. The old `bootstrap.rb`
-command runs mise for those files.
+Alfred, Sublime Text, iTerm, HexColorPicker, and Inconsolata files have been
+removed. Their committed versions remain available in Git history. Mise also
+removes the old HexColorPicker installation from `~/Library/ColorPickers`.
+
+Legacy Ember, Vim, and IMDB workflow files remain for review. Mise currently
+applies Git, zsh, and Ruby configuration. The old `bootstrap.rb` command runs
+mise for those files.
