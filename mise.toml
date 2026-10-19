@@ -1,5 +1,8 @@
-# Keep the files Git reads outside Dropbox as ordinary local copies.
+# Keep installed configuration outside Dropbox as ordinary local copies.
 [dotfiles]
 "~/.gitconfig" = { source = "gitconfig", mode = "copy" }
 "~/.gitattributes" = { source = "gitattributes", mode = "copy" }
 "~/.gitignore_global" = { source = "gitignore_global", mode = "copy" }
+
+"~/.zshrc" = { source = "zshrc", mode = "copy" }
+"~/.zprofile" = { source = "zprofile", mode = "copy" }
