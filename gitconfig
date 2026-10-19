@@ -25,6 +25,7 @@
 	conflictstyle = diff3
 [push]
 	default = current
+	autoSetupRemote = true
 [hub]
 	protocol = https
 [rebase]
@@ -43,3 +44,5 @@
 	lb = branch --sort=committerdate
 	pruneb = !git lb branch --merged master | grep -v -e 'master' -e '\\*' | xargs -n 1 git branch -d && git remote prune origin
 	remove-untracked = clean -fx
+[init]
+	defaultBranch = main

@@ -1,6 +1,5 @@
-.DS_Store
-tmp/restart.txt
-.pry_history
-.sass-cache
 .bundle/config
+.claude/settings.local.json
+.DS_Store
 .eslintcache
+.pry_history
